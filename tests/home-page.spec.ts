@@ -1,11 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
+import { HomePage } from '../pages/HomePage';
 
-test('verify Playwright home page', async ({ page }) => {
-  await page.goto('/');
+test('verify application home page', async ({ page }) => {
+  const homePage = new HomePage(page);
 
-  await expect(page).toHaveTitle(/The Internet/);
-
-  const mainHeading = page.getByRole('heading', { level: 1 });
-
-  await expect(mainHeading).toHaveText('Welcome to the-internet');
+  await homePage.navigate();
+  await homePage.verifyMainHeading();
 });
