@@ -1,10 +1,7 @@
-import { test } from '@playwright/test';
-import { InputsPage } from '../pages/InputsPage';
+import { test } from '../fixtures/testFixtures';
 
 test.describe('Input field tests', () => {
-  test('enter and clear a numeric value', async ({ page }) => {
-    const inputsPage = new InputsPage(page);
-
+  test('enter and clear a numeric value', async ({ inputsPage }) => {
     await inputsPage.navigate();
     await inputsPage.verifyPageIsDisplayed();
 
