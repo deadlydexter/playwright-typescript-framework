@@ -1,10 +1,9 @@
-import { test } from '@playwright/test';
-import { AddRemoveElementsPage } from '../pages/AddRemoveElementsPage';
+import { test } from '../fixtures/testFixtures';
 
 test.describe('Button tests', () => {
-  test('add and remove elements using buttons', async ({ page }) => {
-    const addRemoveElementsPage = new AddRemoveElementsPage(page);
-
+  test('add and remove elements using buttons', async ({
+    addRemoveElementsPage,
+  }) => {
     await addRemoveElementsPage.navigate();
     await addRemoveElementsPage.verifyPageIsDisplayed();
 

@@ -1,9 +1,6 @@
-import { test } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
+import { test } from '../fixtures/testFixtures';
 
-test('verify application home page', async ({ page }) => {
-  const homePage = new HomePage(page);
-
+test('verify application home page', async ({ homePage }) => {
   await homePage.navigate();
   await homePage.verifyMainHeading();
 });
