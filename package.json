@@ -9,15 +9,25 @@
     "test:stage": "cross-env TEST_ENV=stage playwright test",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "lint": "eslint .",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "typecheck": "tsc --noEmit",
+    "quality": "npm run typecheck && npm run lint && npm run format:check"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.62.1",
     "@types/node": "^26.1.2",
     "cross-env": "^10.1.0",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "eslint": "^10.8.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
+    "typescript-eslint": "^8.65.0"
   }
 }

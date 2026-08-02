@@ -6,12 +6,12 @@ The purpose of this project is to practice real-world test automation framework 
 
 ## Technology Stack
 
-* Playwright
-* TypeScript
-* Node.js
-* npm
-* Git
-* GitHub Actions
+- Playwright
+- TypeScript
+- Node.js
+- npm
+- Git
+- GitHub Actions
 
 ## Application Under Test
 
@@ -23,16 +23,16 @@ https://the-internet.herokuapp.com
 
 The website contains practice scenarios for:
 
-* Checkboxes
-* Dropdowns
-* Authentication
-* File uploads
-* Alerts
-* Frames and iframes
-* Multiple windows
-* Dynamic elements
-* Tables
-* Drag and drop
+- Checkboxes
+- Dropdowns
+- Authentication
+- File uploads
+- Alerts
+- Frames and iframes
+- Multiple windows
+- Dynamic elements
+- Tables
+- Drag and drop
 
 Additional practice websites may be added later for calendars, advanced forms, and other UI controls.
 
@@ -153,32 +153,32 @@ A pull request is then opened against the `main` branch.
 
 ## Current Coverage
 
-* Home-page navigation
-* Page-title validation
-* Main-heading validation
-* Page Object Model implementation
-* Chromium execution
-* GitHub Actions execution
+- Home-page navigation
+- Page-title validation
+- Main-heading validation
+- Page Object Model implementation
+- Chromium execution
+- GitHub Actions execution
 
 ## Planned Enhancements
 
-* Form input automation
-* Checkboxes and radio buttons
-* Dropdowns and select lists
-* Calendars and date pickers
-* Alerts and browser dialogs
-* File uploads and downloads
-* Frames and iframes
-* Multiple tabs and windows
-* Dynamic elements
-* Tables
-* Authentication
-* Reusable fixtures
-* Environment configuration
-* Test data management
-* Screenshots, traces, and videos
-* Tags and test grouping
-* Parallel execution
-* Cross-browser execution
-* API testing
-* Enhanced reporting
+- Form input automation
+- Checkboxes and radio buttons
+- Dropdowns and select lists
+- Calendars and date pickers
+- Alerts and browser dialogs
+- File uploads and downloads
+- Frames and iframes
+- Multiple tabs and windows
+- Dynamic elements
+- Tables
+- Authentication
+- Reusable fixtures
+- Environment configuration
+- Test data management
+- Screenshots, traces, and videos
+- Tags and test grouping
+- Parallel execution
+- Cross-browser execution
+- API testing
+- Enhanced reporting
