@@ -5,7 +5,17 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-
+  workflow_dispatch:
+    inputs:
+      test_suite:
+        description: Test suite to run
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - smoke
+          - regression
 jobs:
   test:
     timeout-minutes: 60
@@ -30,7 +40,17 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Run Playwright tests
-        run: npx playwright test --project=chromium
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            npm test
+          elif [ "${{ inputs.test_suite }}" = "smoke" ]; then
+            npm run test:smoke
+          elif [ "${{ inputs.test_suite }}" = "regression" ]; then
+            npm run test:regression
+          else
+            npm test
+          fi
 
       - name: Upload Playwright artifacts
         uses: actions/upload-artifact@v4
