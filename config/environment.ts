@@ -10,24 +10,33 @@ dotenv.config({
 });
 
 const baseURL = process.env.BASE_URL;
-const authUsername = process.env.AUTH_USERNAME;
-const authPassword = process.env.AUTH_PASSWORD;
 
 if (!baseURL) {
   throw new Error(`BASE_URL is missing. Check the environment file: .env.${environment}`);
 }
 
-if (!authUsername) {
-  throw new Error(`AUTH_USERNAME is missing. Check the environment file: .env.${environment}`);
-}
-
-if (!authPassword) {
-  throw new Error(`AUTH_PASSWORD is missing. Check the environment file: .env.${environment}`);
-}
-
 export const environmentConfig = {
   environment,
   baseURL,
-  authUsername,
-  authPassword,
 };
+
+export function getAuthCredentials(): {
+  username: string;
+  password: string;
+} {
+  const username = process.env.AUTH_USERNAME;
+  const password = process.env.AUTH_PASSWORD;
+
+  if (!username) {
+    throw new Error(`AUTH_USERNAME is missing. Check the environment file: .env.${environment}`);
+  }
+
+  if (!password) {
+    throw new Error(`AUTH_PASSWORD is missing. Check the environment file: .env.${environment}`);
+  }
+
+  return {
+    username,
+    password,
+  };
+}
