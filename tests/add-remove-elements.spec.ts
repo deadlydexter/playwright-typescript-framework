@@ -1,9 +1,7 @@
 import { test } from '../fixtures/testFixtures';
 
 test.describe('Button tests', () => {
-  test('add and remove elements using buttons', async ({
-    addRemoveElementsPage,
-  }) => {
+  test('add and remove elements using buttons', async ({ addRemoveElementsPage }) => {
     await addRemoveElementsPage.navigate();
     await addRemoveElementsPage.verifyPageIsDisplayed();
 
