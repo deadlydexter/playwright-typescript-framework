@@ -14,21 +14,15 @@ const authUsername = process.env.AUTH_USERNAME;
 const authPassword = process.env.AUTH_PASSWORD;
 
 if (!baseURL) {
-  throw new Error(
-    `BASE_URL is missing. Check the environment file: .env.${environment}`
-  );
+  throw new Error(`BASE_URL is missing. Check the environment file: .env.${environment}`);
 }
 
 if (!authUsername) {
-  throw new Error(
-    `AUTH_USERNAME is missing. Check the environment file: .env.${environment}`
-  );
+  throw new Error(`AUTH_USERNAME is missing. Check the environment file: .env.${environment}`);
 }
 
 if (!authPassword) {
-  throw new Error(
-    `AUTH_PASSWORD is missing. Check the environment file: .env.${environment}`
-  );
+  throw new Error(`AUTH_PASSWORD is missing. Check the environment file: .env.${environment}`);
 }
 
 export const environmentConfig = {
