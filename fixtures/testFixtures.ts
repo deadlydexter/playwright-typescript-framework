@@ -4,6 +4,7 @@ import { CheckboxesPage } from '../pages/CheckboxesPage';
 import { DropdownPage } from '../pages/DropdownPage';
 import { HomePage } from '../pages/HomePage';
 import { InputsPage } from '../pages/InputsPage';
+import { DynamicLoadingPage } from '../pages/DynamicLoadingPage';
 
 type PageFixtures = {
   homePage: HomePage;
@@ -11,6 +12,7 @@ type PageFixtures = {
   dropdownPage: DropdownPage;
   inputsPage: InputsPage;
   addRemoveElementsPage: AddRemoveElementsPage;
+  dynamicLoadingPage: DynamicLoadingPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -32,6 +34,9 @@ export const test = base.extend<PageFixtures>({
 
   addRemoveElementsPage: async ({ page }, use) => {
     await use(new AddRemoveElementsPage(page));
+  },
+  dynamicLoadingPage: async ({ page }, use) => {
+    await use(new DynamicLoadingPage(page));
   },
 });
 
